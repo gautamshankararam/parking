@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="../css/addSlot.css">
+        <title>Park Zone</title>
+    </head>
+
+    <body onload="setEdit()">
+        <ul>
+            <li onclick="window.history.back()"><a href="javascript:void(0)">Back</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="viewArea.html">Area</a></li>
+            <li><a href="viewDock.html">Dock</a></li>
+            <li><a href="viewApron.html">Apron</a></li>
+            <li><a href="revenue.html">Revenue</a></li>
+            <li><a href="access.html">Workers</a></li>
+            <li><a href="user.html">Users</a></li>
+            <li onclick="logout()" style="float:right"><a class="active" href="javascript:void(0)">Logout</a></li>
+        </ul>
+        
+        <div id="form">
+            <form  action="viewArea.html" method="POST" onsubmit="updateArea()">
+            <label for="areaname">Area Name</label><br/>
+            <input type="text" id="areaname" name="name" placeholder="Area name.." required>
+        
+            <label for="areacapacity">Maximum Capacity</label><br/>
+            <input type="number" id="areacapacity" name="capacity" placeholder="Maximum capacity.." min="1" required>
+
+            <label for="areabasiccharge">Basic Charge</label><br/>
+            <input type="number" id="areabasiccharge" name="basiccharge" placeholder="Basic charge in rupees.." min="1" required>
+
+            <label for="areabasicduration">Basic Duration</label><br/>
+            <input type="number" id="areabasicduration" name="basicduration" placeholder="Basic duration in hours.." min="1" required>
+
+            <label for="areaextracharge">Extra Charge</label><br/>
+            <input type="number" id="areaextracharge" name="extracharge" placeholder="Extra charge in rupees for each hour.." min="1" required>
+            
+            <label for="areatype">Type</label><br/>
+            <select id="areatype" name="type">
+              <option value="owned" >Owned</option>
+              <option value="rented">Rented</option>
+            </select>
+            
+            <label for="arearent">Rent</label><br/>
+            <input type="number" id="arearent" name="rent" placeholder="Rent in rupees" min="0" required>
+            
+
+            <input type="submit"  value="Update">
+            </form>
+        </div>
+        <script src="../js/include.js"></script>
+        <script src="../js/car.js" type="text/javascript"></script>
+  
+
+    </body>
+
+
+</html>

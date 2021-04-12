@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/access.css">
+        <title>Park Zone</title>
+    </head>
+
+    <body onload="render()"> 
+       
+        <ul>
+            <li onclick="window.history.back()"><a href="javascript:void(0)">Back</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="viewArea.html">Area</a></li>
+            <li><a href="viewDock.html">Dock</a></li>
+            <li><a href="viewApron.html">Apron</a></li>
+            <li><a href="revenue.html">Revenue</a></li>
+            <li><a href="access.html">Workers</a></li>
+            <li><a href="user.html">Users</a></li>
+            <li onclick="logout()" style="float:right"><a class="active" href="javascript:void(0)">Logout</a></li>
+        </ul>
+        
+        <table id="worker">
+             
+        </table>
+        <script src="../js/access.js"></script>
+        <script src="../js/include.js"></script>
+    </body>
+</html>    

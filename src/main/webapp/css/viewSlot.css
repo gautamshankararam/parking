@@ -1,0 +1,146 @@
+body{
+  background-image: url('../images/bg.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.center{
+    text-align: center;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+.main{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.card {
+	background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.952);
+    transition: 0.3s;
+    width: 21%;
+    margin: 20px;
+}
+  
+.card:hover {
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+   
+   padding: 2px 16px;
+}
+
+p{
+    color:blueviolet;
+}
+  
+.button {
+    width: 40%;
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+.delete{
+    width: 98%;
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#spinner{
+  visibility: hidden;
+  width: 80px;
+  height: 80px;
+
+  border: 2px solid #f3f3f3;
+  border-top:3px solid #f25a41;
+  border-radius: 100%;
+
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin: auto;
+
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  } to {
+      transform: rotate(360deg);
+  }
+}
+
+#spinner.show {
+  visibility: visible;
+}
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
+
+  .head{
+    display:flex;
+    justify-content:center
+}
+
+i{
+    margin:15px;
+    cursor: pointer;
+}
+
+#component{
+  display:flex;
+  justify-content:space-between;
+}

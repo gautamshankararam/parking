@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/addSlot.css">
+        <title>Park Zone</title>
+    </head>
+
+    <body onload="setDefault()">
+       
+        <ul>
+            <li onclick="window.history.back()"><a href="javascript:void(0)">Back</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="viewArea.html">Area</a></li>
+            <li><a href="viewDock.html">Dock</a></li>
+            <li><a href="viewApron.html">Apron</a></li>
+            <li><a href="revenue.html">Revenue</a></li>
+            <li><a href="access.html">Workers</a></li>
+            <li><a href="user.html">Users</a></li>
+            <li onclick="logout()" style="float:right"><a class="active" href="javascript:void(0)">Logout</a></li>
+        </ul>
+        
+        
+        
+        <div id="form">
+            <form  action="viewDock.html" method="POST" onsubmit="addShip()">
+            
+            <label for="shipname">Ship Name</label><br/>
+            <input type="text" id="shipname" name="name" placeholder="Ship name.." required>
+        
+            <label for="dockname">Dock Name</label><br/>
+            <input type="text" id="dockname" name="area" placeholder="Dock name.." required>
+            
+            <label for="shipparkingduration">Parking Duration</label><br/>
+            <input type="number" id="shipparkingduration" name="parkingduration" placeholder="Duration in hours.." min="1" required onchange="calculateCost()">
+
+            <label for="shipparkingcost">Parking Cost</label><br/>
+            <input type="number" id="shipparkingcost" name="parkingcost" placeholder="Cost in rupees.." min="1" readonly required>
+        
+
+            <input type="submit" value="Submit">
+            </form>
+        </div>
+        <script src="../js/include.js"></script>
+        <script src="../js/ship.js"></script>
+  
+
+    </body>
+
+
+</html>

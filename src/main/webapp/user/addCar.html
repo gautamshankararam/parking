@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/addSlot.css">
+        <title>Park Zone</title>
+    </head>
+
+    <body onload="setDefault()">
+       
+        <ul>
+            <li onclick="window.history.back()"><a href="javascript:void(0)">Back</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="viewArea.html">Area</a></li>
+            <li><a href="viewDock.html">Dock</a></li>
+            <li><a href="viewApron.html">Apron</a></li>
+            
+            <li onclick="logout()" style="float:right"><a class="active" href="javascript:void(0)">Logout</a></li>
+        </ul>
+        
+        
+        
+        <div id="form">
+            <form  action="viewArea.html" method="POST" onsubmit="addCar()">
+            
+            <label for="carname">Car Name</label><br/>
+            <input type="text" id="carname" name="name" placeholder="Car name.." required>
+        
+            <label for="areaname">Area Name</label><br/>
+            <input type="text" id="areaname" name="area" placeholder="Area name.." required>
+            
+            <label for="carparkingduration">Parking Duration</label><br/>
+            <input type="number" id="carparkingduration" name="parkingduration" placeholder="Duration in hours.." min="1" required onchange="calculateCost()">
+
+            <label for="carparkingcost">Parking Cost</label><br/>
+            <input type="number" id="carparkingcost" name="parkingcost" placeholder="Cost in rupees.." min="1" readonly required>
+        
+
+            <input type="submit" value="Submit">
+            </form>
+        </div>
+        <script src="../js/user/include.js"></script>
+        <script src="../js/user/car.js"></script>
+  
+
+    </body>
+
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Park Zone</title>
+<link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+        <ul> 
+            <li style="float:right"><a  href="worker.html">Worker</a></li>
+            <li style="float:right"><a class="active" href="signup.html">Sign Up</a></li>
+            <li style="float:right"><a  href="index.html">Login</a></li>
+        </ul>      
+        <div id="form">
+            <h2 style="text-align:center">USER</h2>
+            <form  action="index.html" method="POST" onsubmit="validate()">
+            
+            <label for="email">Email</label><br/>
+            <input type="email" id="email" name="email" placeholder="Enter email.." required>
+        
+            <label for="password1">Password</label><br/>
+            <input type="password" id="password1" name="password1" placeholder="Enter Password.."  required onchange="matchPass()">
+            
+            <label for="password2">Confirm Password</label><br/>
+            <input type="password" id="password2" name="password2" placeholder="Confirn Password.."  required onchange="matchPass()">
+            
+            <p id="verify"></p>
+
+
+            <input type="submit"  value="Submit">
+            </form>
+        </div>
+        
+        <script src="js/signup.js"></script>
+
+</body>
+</html>
